@@ -59,4 +59,4 @@ O Cypress Plugin API é uma biblioteca que fornece uma interface para criar plug
 
 O Mocha JUnit Reporter é um reporter do Mocha que gera relatórios no formato JUnit XML. Ele é útil para integrar o Cypress com ferramentas de integração contínua (CI) que suportam o formato JUnit, como Jenkins, TeamCity e Bamboo. Esses relatórios podem fornecer informações detalhadas sobre a execução dos testes, incluindo resultados, falhas e tempo de execução.
 
----
+--- 
