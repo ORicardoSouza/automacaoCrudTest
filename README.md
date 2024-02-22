@@ -25,16 +25,16 @@ npm install
 
 Para executar os testes, você pode utilizar os seguintes comandos:
 
-- Executar testes no navegador interno:
+- Executar testes com interface gráfica:
 
 ```bash
-npm run deleteResults && npm run cy:run
+npm run deleteResults && npm run cy:open
 ```
 
 - Executar testes no modo headless (sem interface gráfica):
 
 ```bash
-npm run test:headless
+npm run test
 ```
 
 Os testes serão executados automaticamente em segundo plano e você verá os resultados no terminal.

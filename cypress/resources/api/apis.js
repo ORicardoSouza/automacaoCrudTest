@@ -17,9 +17,8 @@ function postUsers() {
 
 function putUsers() {
     return cy.api({
-        method: 'PUT', url: `/posts/1`, headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
+        method: 'PUT', url: `/posts/1`,
+        headers: { 'Content-type': 'application/json; charset=UTF-8', },
         body: { id: 1, title: 'foo', body: 'bar', userId: 1, },
         failOnStatusCode: false,
     });
@@ -27,7 +26,8 @@ function putUsers() {
 
 function deleteUsers() {
     return cy.api({
-        method: 'DELETE', url: '/users/1', headers: { "content-type": "application/json; charset=utf-8" },
+        method: 'DELETE', url: '/users/1',
+        headers: { "content-type": "application/json; charset=utf-8" },
         failOnStatusCode: false,
     });
 }
