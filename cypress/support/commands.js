@@ -1,5 +1,6 @@
-import { getUsers, postUsers, putUsers, deleteUsers } from '../resources/api/apis.js';
+import { getUsers, postUsers, putUsers, deleteUsers, getUsersError, postUsersError, putUsersError, deleteUsersError } from '../resources/api/apis.js';
 
+//### SUCESSO ###
 Cypress.Commands.add('postUsers', () => {
     postUsers().then((response) => {
         expect(response.status).to.eq(201);
@@ -95,5 +96,59 @@ Cypress.Commands.add('deleteUsers', () => {
         } else {
             cy.log(`Falha na operação`);
         }
+    });
+});
+
+//### ERROR ####
+Cypress.Commands.add('postUsersError', () => {
+    postUsersError().then((response) => {
+        expect([404, 500]).to.include(response.status);
+        expect(response.body).to.be.empty;
+
+        const successMessage = `Cenário de falha validado`;
+        const failureMessage = `Falha na operação`;
+
+        if (response.status === 404 || response.status === 500) { cy.log(successMessage); }
+        else { cy.log(failureMessage); }
+    });
+});
+
+Cypress.Commands.add('getUsersError', () => {
+    getUsersError().then((response) => {
+        expect([404, 500]).to.include(response.status);
+        expect(response.body).to.be.empty;
+
+        // Define a mensagem de sucesso e falha
+        const successMessage = `Cenário de falha validado`;
+        const failureMessage = `Falha na operação`;
+
+        if (response.status === 404 || response.status === 500) { cy.log(successMessage) }
+        else { cy.log(failureMessage) }
+    });
+}); 
+
+Cypress.Commands.add('putUsersError', () => {
+    putUsersError().then((response) => {
+        expect([404, 500]).to.include(response.status);
+        expect(response.body).not.be.empty;
+
+        const successMessage = `Cenário de falha validado`;
+        const failureMessage = `Falha na operação, verificar com a área responsável`;
+
+        if (response.status === 404 || response.status === 500) { cy.log(successMessage) }
+        else { cy.log(failureMessage) }
+    });
+});
+
+Cypress.Commands.add('deleteUsersError', () => {
+    deleteUsersError().then((response) => {
+        expect(response.status).to.eq(404);
+        expect(response.body).to.be.empty;
+
+        const successMessage = `Cenário de falha validado`;
+        const failureMessage = `Falha na operação`;
+
+        if (response.status === 404) { cy.log(successMessage) }
+        else { cy.log(failureMessage) }
     });
 });

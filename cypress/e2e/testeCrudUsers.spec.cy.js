@@ -1,14 +1,33 @@
 describe('Testes_CRUD', () => {
-    it('Deverá realizar teste de POST com sucesso', () => {
-        cy.postUsers();
+
+    context(`Deverá validar cenário de sucesso`, () => {
+        it('Deverá realizar teste de POST ', () => {
+            cy.postUsers();
+        });
+        it('Deverá realizar teste de GET ', () => {
+            cy.getUsers();
+        });
+        it('Deverá realizar teste de PUT ', () => {
+            cy.putUsers();
+        });
+        it('Deverá realizar teste de DELETE ', () => {
+            cy.deleteUsers();
+        });
     });
-    it('Deverá realizar teste de GET com sucesso', () => {
-        cy.getUsers();
-    });
-    it('Deverá realizar teste de PUT com sucesso', () => {
-        cy.putUsers();
-    });
-    it('Deverá realizar teste de DELETE com sucesso', () => {
-        cy.deleteUsers();
-    });
+    context(`Deverá validar cenário de falha`, () => {
+        it('Deverá realizar teste de POST ', () => {
+            cy.postUsersError();
+        });
+        it('Deverá realizar teste de GET ', () => {
+            cy.getUsersError();
+        });
+        it('Deverá realizar teste de PUT ', () => {
+            cy.putUsersError();
+        });
+        it('Deverá realizar teste de DELETE ', () => {
+            cy.deleteUsersError();
+        });
+    })
+
+
 });
