@@ -39,8 +39,6 @@ npm run test
 
 Os testes serão executados automaticamente em segundo plano e você verá os resultados no terminal.
 
-Claro! Aqui está uma explicação básica para cada uma das bibliotecas que você listou:
-
 ---
 
 # Bibliotecas Usadas
