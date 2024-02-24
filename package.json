@@ -18,11 +18,12 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.5",
+    "git-repo-name": "^1.0.1",
     "mocha-junit-reporter": "^2.2.1",
     "moment-timezone": "^0.5.45",
     "node-localstorage": "^3.0.5",
     "open": "^10.0.3",
     "xmldom": "^0.6.0",
-    "git-repo-name": "^1.0.1"  
+    "cypress-plugin-api": "^2.11.1"
   }
 }
