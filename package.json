@@ -4,17 +4,26 @@
   "description": "Projeto de automação API-test",
   "main": "index.js",
   "scripts": {
-    "updateLibrary": "npm install",    
+    "updateLibrary": "npm install",
     "deleteResults": "rm results/* || true",
+    "deleteScreenshots": "rm cypress/screenshots/** || true",
     "cy:open": "cypress open",
     "cy:run": "cypress run --config video=false",
-    "test": "npm run deleteResults && npm run cy:run"
+    "test": "npm run deleteResults && npm run deleteScreenshots && npm run cy:run",
+    "convertxml": "node convertXml.js results",
+    "openHtml": "node openHtml.mjs results",
+    "convertOpenHtml": "node convertOpenHtml.js results && npm run openHtml"
   },
   "author": "Ricardo Souza",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.5",
-    "cypress-plugin-api": "^2.11.1",
-    "mocha-junit-reporter": "^2.2.1"
+    "mocha-junit-reporter": "^2.2.1",
+    "cypress-plugin-steps": "^1.1.1",
+    "moment-timezone": "^0.5.45",
+    "node-localstorage": "^3.0.5",
+    "open": "^10.0.3",
+    "xmldom": "^0.6.0",
+    "git-repo-name": "^1.0.1"  
   }
 }
