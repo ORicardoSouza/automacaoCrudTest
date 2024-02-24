@@ -41,20 +41,40 @@ Os testes serão executados automaticamente em segundo plano e você verá os re
 
 ---
 
-# Bibliotecas Usadas
+# Bibliotecas Utilizadas
 
-Este projeto requer o uso das seguintes bibliotecas:
+Este projeto utiliza as seguintes bibliotecas:
 
-## Cypress (^13.6.5)
+1. **Cypress** [Versão: ^13.6.5](https://www.npmjs.com/package/cypress)
+   - Descrição: Cypress é uma ferramenta de teste de front-end rápida, fácil de usar e robusta, construída para a web moderna.
+   - Documentação: [Cypress Docs](https://docs.cypress.io/guides/overview/why-cypress.html)
 
-O Cypress é um framework de teste de front-end de código aberto que permite escrever e executar testes de forma rápida e fácil em navegadores modernos. Ele fornece uma API poderosa para interagir com sua aplicação e testar seu comportamento.
+2. **Mocha JUnit Reporter** [Versão: ^2.2.1](https://www.npmjs.com/package/mocha-junit-reporter)
+   - Descrição: Um reporter de Mocha que gera arquivos de saída no formato JUnit XML.
+   - Documentação: [Mocha JUnit Reporter](https://www.npmjs.com/package/mocha-junit-reporter)
 
-## Cypress Plugin API (^2.11.1)
+3. **Moment Timezone** [Versão: ^0.5.45](https://www.npmjs.com/package/moment-timezone)
+   - Descrição: Biblioteca JavaScript que analisa, valida, manipula e exibe datas e horas em JavaScript.
+   - Documentação: [Moment Timezone Docs](https://momentjs.com/timezone/docs/)
 
-O Cypress Plugin API é uma biblioteca que fornece uma interface para criar plugins personalizados para o Cypress. Com essa API, você pode estender a funcionalidade do Cypress para atender às necessidades específicas do seu projeto.
+4. **Node LocalStorage** [Versão: ^3.0.5](https://www.npmjs.com/package/node-localstorage)
+   - Descrição: Simula a API do LocalStorage do navegador para Node.js.
+   - Documentação: [Node LocalStorage](https://www.npmjs.com/package/node-localstorage)
 
-## Mocha JUnit Reporter (^2.2.1)
+5. **Open** [Versão: ^10.0.3](https://www.npmjs.com/package/open)
+   - Descrição: Abre URLs, arquivos e aplicativos de forma cruzada de plataforma.
+   - Documentação: [Open Package](https://www.npmjs.com/package/open)
 
-O Mocha JUnit Reporter é um reporter do Mocha que gera relatórios no formato JUnit XML. Ele é útil para integrar o Cypress com ferramentas de integração contínua (CI) que suportam o formato JUnit, como Jenkins, TeamCity e Bamboo. Esses relatórios podem fornecer informações detalhadas sobre a execução dos testes, incluindo resultados, falhas e tempo de execução.
+6. **XmlDom** [Versão: ^0.6.0](https://www.npmjs.com/package/xmldom)
+   - Descrição: Biblioteca de manipulação de XML para JavaScript.
+   - Documentação: [XmlDom](https://www.npmjs.com/package/xmldom)
 
---- 
+7. **Git Repo Name** [Versão: ^1.0.1](https://www.npmjs.com/package/git-repo-name)
+   - Descrição: Obtém o nome do repositório Git de um diretório local.
+   - Documentação: [Git Repo Name](https://www.npmjs.com/package/git-repo-name)
+
+Certifique-se de revisar a documentação de cada biblioteca para obter informações detalhadas sobre como utilizá-las em seu projeto.
+
+---
+
+Este README fornece uma breve visão geral das bibliotecas utilizadas no projeto, juntamente com links para suas respectivas documentações para referência adicional.
